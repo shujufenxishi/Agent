@@ -1,0 +1,19 @@
+syntax = "proto3";
+ 
+package pb;
+ 
+// 定义微服务对外提供的接口
+service Greeter {
+ 
+    rpc Hello(Request) returns (Response) {}
+}
+ 
+// 请求
+message Request {
+    string name = 1;
+}
+ 
+// 响应
+message Response {
+    string msg = 1;
+}
